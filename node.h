@@ -1,53 +1,38 @@
-//
-//  linkedlist.h
-//  LinkedList_simple
-//
-//  Created by Mingmanas Sivaraksa
-//
-
 #ifndef node_h
 #define node_h
-class NODE{
-     int data;
+
+class NODE {
+    char data;
     NODE *nextPtr;
 public:
-    NODE(int);
+    NODE(char);
     ~NODE();
     void set_next(NODE*);
     NODE* get_next();
-    int get_value();
+    char get_value();
 };
+
 typedef NODE* NodePtr;
 
-
-NODE::NODE(int x){
-    data=x;
-    nextPtr=NULL;
-    //pPtr =NULL; not using doubly
+NODE::NODE(char x) {
+    data = x;
+    nextPtr = NULL;
 }
-NODE* NODE::get_next(){
+
+NODE* NODE::get_next() {
     return nextPtr;
-
 }
 
-int NODE::get_value(){
+char NODE::get_value() {
     return data;
-
 }
 
-
-void NODE::set_next(NODE *t){
-     nextPtr=t;
-
-}
-NODE::~NODE(){
-     cout<<"deleting "<<data<<endl;
-
+void NODE::set_next(NODE *t) {
+    nextPtr = t;
 }
 
-
-
-
-
+NODE::~NODE() {
+   
+}
 
 #endif
