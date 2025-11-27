@@ -1,6 +1,6 @@
 #include <iostream>
-#include <cstring>   // strcmp
-#include <cstdlib>   // atoi
+#include <cstring>  
+#include <cstdlib>   
 #include "queue.h"
 
 using namespace std;
