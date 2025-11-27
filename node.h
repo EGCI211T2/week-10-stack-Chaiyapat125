@@ -1,38 +1,23 @@
-#ifndef node_h
-#define node_h
+#ifndef NODE_H
+#define NODE_H
 
 class NODE {
-    char data;
-    NODE *nextPtr;
+    int data;
+    NODE* next;
+
 public:
-    NODE(char);
-    ~NODE();
-    void set_next(NODE*);
-    NODE* get_next();
-    char get_value();
+    explicit NODE(int v) : data(v), next(nullptr) {}
+
+    void set_next(NODE* p) { 
+        next = p; }
+
+    NODE* get_next() const { 
+        return next; }
+
+    int get_value() const  { 
+        return data; }
 };
 
 typedef NODE* NodePtr;
-
-NODE::NODE(char x) {
-    data = x;
-    nextPtr = NULL;
-}
-
-NODE* NODE::get_next() {
-    return nextPtr;
-}
-
-char NODE::get_value() {
-    return data;
-}
-
-void NODE::set_next(NODE *t) {
-    nextPtr = t;
-}
-
-NODE::~NODE() {
-   
-}
 
 #endif
